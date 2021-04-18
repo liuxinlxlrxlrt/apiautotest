@@ -1,0 +1,14 @@
+<?xmlversion = "1.0" encoding= "UTF-8"?>
+<!--<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd" >-->
+<suite name="用户管理系统测试套件">
+    <test name="成语大全接口">
+        <classes>
+            <class name="com.api.autotest.testcase.DataProviderTestV2"></class>
+        </classes>
+    </test>
+    <test name="手机号码归属地">
+        <classes>
+            <class name="com.api.autotest.testcase.DataProviderTestV3"></class>
+        </classes>
+    </test>
+</suite>
