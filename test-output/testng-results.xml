@@ -2,12 +2,12 @@
 <testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
   <reporter-output>
   </reporter-output>
-  <suite name="用户管理系统测试套件" duration-ms="3301" started-at="2021-04-18T17:38:37 CST" finished-at="2021-04-18T17:38:40 CST">
+  <suite name="接口自动化" duration-ms="3316" started-at="2021-04-18T17:48:42 CST" finished-at="2021-04-18T17:48:45 CST">
     <groups>
     </groups>
-    <test name="成语大全接口" duration-ms="2827" started-at="2021-04-18T17:38:37 CST" finished-at="2021-04-18T17:38:40 CST">
+    <test name="成语大全接口" duration-ms="2823" started-at="2021-04-18T17:48:42 CST" finished-at="2021-04-18T17:48:45 CST">
       <class name="com.api.autotest.testcase.DataProviderTestV2">
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@2173f6d9]" name="test" duration-ms="1896" started-at="2021-04-18T17:38:37 CST" data-provider="datas" finished-at="2021-04-18T17:38:39 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@7a187f14]" name="test" duration-ms="1869" started-at="2021-04-18T17:48:43 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -43,7 +43,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@2173f6d9]" name="test" duration-ms="97" started-at="2021-04-18T17:38:39 CST" data-provider="datas" finished-at="2021-04-18T17:38:39 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@7a187f14]" name="test" duration-ms="59" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -79,7 +79,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@2173f6d9]" name="test" duration-ms="36" started-at="2021-04-18T17:38:39 CST" data-provider="datas" finished-at="2021-04-18T17:38:39 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@7a187f14]" name="test" duration-ms="38" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -115,7 +115,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@2173f6d9]" name="test" duration-ms="138" started-at="2021-04-18T17:38:39 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@7a187f14]" name="test" duration-ms="113" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -151,7 +151,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@2173f6d9]" name="test" duration-ms="31" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@7a187f14]" name="test" duration-ms="37" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -187,7 +187,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@2173f6d9]" name="test" duration-ms="62" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@7a187f14]" name="test" duration-ms="56" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -225,9 +225,9 @@
         </test-method> <!-- test -->
       </class> <!-- com.api.autotest.testcase.DataProviderTestV2 -->
     </test> <!-- 成语大全接口 -->
-    <test name="手机号码归属地" duration-ms="436" started-at="2021-04-18T17:38:40 CST" finished-at="2021-04-18T17:38:40 CST">
+    <test name="手机号码归属地" duration-ms="425" started-at="2021-04-18T17:48:45 CST" finished-at="2021-04-18T17:48:45 CST">
       <class name="com.api.autotest.testcase.DataProviderTestV3">
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="test" duration-ms="96" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="test" duration-ms="36" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -263,7 +263,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="test" duration-ms="56" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="test" duration-ms="71" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -299,7 +299,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="test" duration-ms="52" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="test" duration-ms="97" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -335,7 +335,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="test" duration-ms="27" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="test" duration-ms="32" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -371,7 +371,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="test" duration-ms="89" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="test" duration-ms="67" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -407,7 +407,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="test" duration-ms="46" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="test" duration-ms="45" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -443,7 +443,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="test" duration-ms="56" started-at="2021-04-18T17:38:40 CST" data-provider="datas" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="test" duration-ms="65" started-at="2021-04-18T17:48:45 CST" data-provider="datas" finished-at="2021-04-18T17:48:45 CST">
           <params>
             <param index="0">
               <value>
@@ -479,11 +479,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- test -->
-        <test-method status="PASS" signature="batchWriteBackDate()[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@60285225]" name="batchWriteBackDate" is-config="true" duration-ms="113" started-at="2021-04-18T17:38:40 CST" finished-at="2021-04-18T17:38:40 CST">
+        <test-method status="PASS" signature="batchWriteBackDate()[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@45820e51]" name="batchWriteBackDate" is-config="true" duration-ms="108" started-at="2021-04-18T17:48:45 CST" finished-at="2021-04-18T17:48:46 CST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- batchWriteBackDate -->
       </class> <!-- com.api.autotest.testcase.DataProviderTestV3 -->
     </test> <!-- 手机号码归属地 -->
-  </suite> <!-- 用户管理系统测试套件 -->
+  </suite> <!-- 接口自动化 -->
 </testng-results>

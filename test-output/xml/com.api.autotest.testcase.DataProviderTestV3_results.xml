@@ -4,16 +4,16 @@
            failures="0"
            errors="0"
            skipped="0"
-           time="0.422">
+           time="0.413">
   <properties />
   
   
-            <testcase name="test" time="0.056" classname="com.api.autotest.testcase.DataProviderTestV3" />
-                <testcase name="test" time="0.096" classname="com.api.autotest.testcase.DataProviderTestV3" />
-                <testcase name="test" time="0.052" classname="com.api.autotest.testcase.DataProviderTestV3" />
-                <testcase name="test" time="0.089" classname="com.api.autotest.testcase.DataProviderTestV3" />
-                <testcase name="test" time="0.027" classname="com.api.autotest.testcase.DataProviderTestV3" />
-                <testcase name="test" time="0.046" classname="com.api.autotest.testcase.DataProviderTestV3" />
-                <testcase name="test" time="0.056" classname="com.api.autotest.testcase.DataProviderTestV3" />
+            <testcase name="test" time="0.097" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.045" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.065" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.032" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.036" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.071" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.067" classname="com.api.autotest.testcase.DataProviderTestV3" />
       
 </testsuite>

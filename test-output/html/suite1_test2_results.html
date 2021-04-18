@@ -12,7 +12,7 @@
 <body>
 <h1>手机号码归属地</h1>
 <p>
-  Test duration: 0.535s
+  Test duration: 0.521s
 </p>
 
 
@@ -30,11 +30,11 @@
                   test
       </td>
   <td class="duration">
-    0.052s
+    0.065s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"15", "3", "{"phone":"${invalidPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"202","reason":"Wrong phone number!","result":null,"error_code":201102}", "", ""</span><br />
+          <i>Method arguments: </i><span class="arguments">"19", "3", "{"phone":"${notRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}", "", ""</span><br />
     
         
 
@@ -45,67 +45,7 @@
                   test
       </td>
   <td class="duration">
-    0.027s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"16", "3", "{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${invalidKeyOfLocaiton}"}", "{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}", "", ""</span><br />
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  test
-      </td>
-  <td class="duration">
-    0.056s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"14", "3", "{"phone":"","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"201","reason":"The phone number can not be empty!","result":null,"error_code":201101}", "", ""</span><br />
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  test
-      </td>
-  <td class="duration">
-    0.046s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"18", "3", "{"phone":"${registeredPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"200","reason":"Return Successd!","result":{"province":"北京","city":"北京","areacode":"010","zip":"100000","company":"分享通信","card":""},"error_code":0}", "", ""</span><br />
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  test
-      </td>
-  <td class="duration">
-    0.089s
-  </td>
-  <td class="result">
-        
-          <i>Method arguments: </i><span class="arguments">"17", "3", "{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}", "[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]", "[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]"</span><br />
-    
-        
-
-      </td>
-</tr>
-<tr>
-  <td class="method">
-                  test
-      </td>
-  <td class="duration">
-    0.096s
+    0.036s
   </td>
   <td class="result">
         
@@ -120,11 +60,71 @@
                   test
       </td>
   <td class="duration">
-    0.056s
+    0.067s
   </td>
   <td class="result">
         
-          <i>Method arguments: </i><span class="arguments">"19", "3", "{"phone":"${notRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}", "", ""</span><br />
+          <i>Method arguments: </i><span class="arguments">"17", "3", "{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}", "[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]", "[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]"</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  test
+      </td>
+  <td class="duration">
+    0.071s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"14", "3", "{"phone":"","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"201","reason":"The phone number can not be empty!","result":null,"error_code":201101}", "", ""</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  test
+      </td>
+  <td class="duration">
+    0.032s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"16", "3", "{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${invalidKeyOfLocaiton}"}", "{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}", "", ""</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  test
+      </td>
+  <td class="duration">
+    0.045s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"18", "3", "{"phone":"${registeredPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"200","reason":"Return Successd!","result":{"province":"北京","city":"北京","areacode":"010","zip":"100000","company":"分享通信","card":""},"error_code":0}", "", ""</span><br />
+    
+        
+
+      </td>
+</tr>
+<tr>
+  <td class="method">
+                  test
+      </td>
+  <td class="duration">
+    0.097s
+  </td>
+  <td class="result">
+        
+          <i>Method arguments: </i><span class="arguments">"15", "3", "{"phone":"${invalidPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}", "{"resultcode":"202","reason":"Wrong phone number!","result":null,"error_code":201102}", "", ""</span><br />
     
         
 
