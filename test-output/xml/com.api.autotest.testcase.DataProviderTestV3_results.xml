@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="手机号码归属地"
+           tests="7"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.422">
+  <properties />
+  
+  
+            <testcase name="test" time="0.056" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.096" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.052" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.089" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.027" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.046" classname="com.api.autotest.testcase.DataProviderTestV3" />
+                <testcase name="test" time="0.056" classname="com.api.autotest.testcase.DataProviderTestV3" />
+      
+</testsuite>

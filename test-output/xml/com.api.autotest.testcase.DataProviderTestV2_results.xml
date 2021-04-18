@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="成语大全接口"
+           tests="6"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="2.260">
+  <properties />
+  
+  
+            <testcase name="test" time="0.097" classname="com.api.autotest.testcase.DataProviderTestV2" />
+                <testcase name="test" time="0.036" classname="com.api.autotest.testcase.DataProviderTestV2" />
+                <testcase name="test" time="0.138" classname="com.api.autotest.testcase.DataProviderTestV2" />
+                <testcase name="test" time="0.062" classname="com.api.autotest.testcase.DataProviderTestV2" />
+                <testcase name="test" time="0.031" classname="com.api.autotest.testcase.DataProviderTestV2" />
+                <testcase name="test" time="1.896" classname="com.api.autotest.testcase.DataProviderTestV2" />
+      
+</testsuite>

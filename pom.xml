@@ -70,7 +70,34 @@
             <artifactId>poi</artifactId>
             <version>3.17</version>
         </dependency>
+        <!--testng测试报告-->
+        <!-- 添加reportNG依赖 -->
+        <dependency>
+            <groupId>org.uncommons</groupId>
+            <artifactId>reportng</artifactId>
+            <version>1.1.2</version>
+            <scope>test</scope>
+            <!-- 排除testNG依赖 -->
+            <exclusions>
+                <exclusion>
+                    <groupId>org.testng</groupId>
+                    <artifactId>testng</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
+        <dependency>
+            <groupId>com.google.inject</groupId>
+            <artifactId>guice</artifactId>
+            <version>3.0</version>
+            <scope>test</scope>
+        </dependency>
+
     </dependencies>
+
+    <properties>
+        <xmlFileName>./src/main/resources/testng.xml</xmlFileName>
+    </properties>
+
 
     <build>
         <plugins>
@@ -88,23 +115,48 @@
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-surefire-plugin</artifactId>
                 <version>2.7.1</version>
                 <configuration>
-                    <!--忽略执行过程中执行失败的测试方法，继续执行剩余的测试类和方法-->
-                    <testFailureIgnore>true</testFailureIgnore>
-                    <!--指定构建过程中的编码格式-->
-                    <argLine>
-                        -Dfile.encoding=UTF-8
-                    </argLine>
+                    <!--&lt;!&ndash;忽略执行过程中执行失败的测试方法，继续执行剩余的测试类和方法&ndash;&gt;-->
+                    <!--<testFailureIgnore>true</testFailureIgnore>-->
+                    <!--&lt;!&ndash;指定构建过程中的编码格式&ndash;&gt;-->
+                    <!--<argLine>-->
+                        <!-- -Dfile.encoding=UTF-8-->
+                    <!--</argLine>-->
+                    <!--<suiteXmlFiles>-->
+                        <!--<suiteXmlFile>-->
+                            <!--./src/main/resources/testng.xml-->
+                        <!--</suiteXmlFile>-->
+                    <!--</suiteXmlFiles>-->
+
+                    <!--testng测试报告插件-->
+                    <skipTests>false</skipTests>
                     <suiteXmlFiles>
-                        <suiteXmlFile>
-                            ./src/main/resources/testng.xml
-                        </suiteXmlFile>
+                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>
                     </suiteXmlFiles>
+                    <properties>
+                        <property>
+                            <name>usedefaultlisteners</name>
+                            <value>false</value>
+                        </property>
+                        <property>
+                            <name>listener</name>
+                            <value>org.uncommons.reportng.HTMLReporter,org.uncommons.reportng.JUnitXMLReporter</value>
+                        </property>
+                    </properties>
+                    <forkMode>always</forkMode>
                 </configuration>
             </plugin>
-
         </plugins>
     </build>
 

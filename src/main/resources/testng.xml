@@ -11,4 +11,11 @@
             <class name="com.api.autotest.testcase.DataProviderTestV3"></class>
         </classes>
     </test>
+
+    <!--testng测试报告-->
+    <listeners>
+        <listener class-name="org.uncommons.reportng.HTMLReporter"/>
+        <listener class-name="org.uncommons.reportng.JUnitXMLReporter"/>
+    </listeners>
+
 </suite>
