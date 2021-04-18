@@ -94,11 +94,6 @@
 
     </dependencies>
 
-    <properties>
-        <xmlFileName>./src/main/resources/testng.xml</xmlFileName>
-    </properties>
-
-
     <build>
         <plugins>
             <plugin>
@@ -142,7 +137,9 @@
                     <!--testng测试报告插件-->
                     <skipTests>false</skipTests>
                     <suiteXmlFiles>
-                        <suiteXmlFile>${xmlFileName}</suiteXmlFile>
+                        <suiteXmlFile>
+                            ./src/main/resources/testng.xml
+                        </suiteXmlFile>
                     </suiteXmlFiles>
                     <properties>
                         <property>
