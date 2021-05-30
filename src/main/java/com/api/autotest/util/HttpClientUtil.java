@@ -7,21 +7,94 @@ import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.methods.HttpPost;
 import org.apache.http.client.utils.HttpClientUtils;
+import org.apache.http.config.Registry;
+import org.apache.http.config.RegistryBuilder;
+import org.apache.http.conn.socket.ConnectionSocketFactory;
+import org.apache.http.conn.socket.PlainConnectionSocketFactory;
+import org.apache.http.conn.ssl.NoopHostnameVerifier;
+import org.apache.http.conn.ssl.SSLConnectionSocketFactory;
 import org.apache.http.entity.StringEntity;
 import org.apache.http.impl.client.CloseableHttpClient;
+import org.apache.http.impl.client.HttpClientBuilder;
 import org.apache.http.impl.client.HttpClients;
+import org.apache.http.impl.conn.PoolingHttpClientConnectionManager;
 import org.apache.http.message.BasicHeader;
 import org.apache.http.message.BasicNameValuePair;
+import org.apache.http.ssl.SSLContextBuilder;
+import org.apache.http.ssl.TrustStrategy;
 import org.apache.http.util.EntityUtils;
 import org.apache.log4j.Logger;
 
+import javax.net.ssl.SSLContext;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
 import java.nio.charset.StandardCharsets;
+import java.security.KeyManagementException;
+import java.security.KeyStoreException;
+import java.security.NoSuchAlgorithmException;
+import java.security.cert.CertificateException;
+import java.security.cert.X509Certificate;
 import java.util.*;
 
 public class HttpClientUtil {
     private static Logger logger = Logger.getLogger(HttpClientUtil.class);
+
+    private static final HttpClientBuilder httpClientBuilder = HttpClients.custom();
+
+    {
+        //1、绕过不安全的https请求的证书检验
+        Registry<ConnectionSocketFactory> registry = null;
+        try {
+            registry = RegistryBuilder.<ConnectionSocketFactory>create()
+                    .register("http", PlainConnectionSocketFactory.INSTANCE)
+                    .register("https", trustHttpsCertificates())
+                    .build();
+        } catch (KeyStoreException e) {
+            e.printStackTrace();
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        } catch (KeyManagementException e) {
+            e.printStackTrace();
+        }
+
+        //2、创建链接池
+        PoolingHttpClientConnectionManager cm = new PoolingHttpClientConnectionManager(registry);
+
+        cm.setMaxTotal(50);//连接池最大有50个链接,<=20
+
+        //ip+端口号=一个路由
+        cm.setDefaultMaxPerRoute(50);//每个路由默认有多少个链接，<=2
+
+/*
+         //连接池的最大连接数
+        System.out.println(cm.getMaxTotal());
+         //每一个路由的最大连接数
+        System.out.println(cm.getDefaultMaxPerRoute());
+         //连接池的最大连接数
+        PoolStats totalstats = cm.getTotalStats();
+        System.out.println(totalstats.getMax());
+         //连接池里面有有多少个链接被占用了
+        System.out.println(totalstats.getLeased());
+         //链接池里面有多少个链接可用
+        System.out.println(totalstats.getAvailable());
+*/
+
+        httpClientBuilder.setConnectionManager(cm);
+
+        //3、设置默认请求配置
+//        RequestConfig requestConfig = RequestConfig.custom()
+//                .setConnectTimeout(5000)
+//                .setSocketTimeout(3000)
+//                .setConnectionRequestTimeout(5000)
+//                .build();
+//        httpClientBuilder.setDefaultRequestConfig(requestConfig);
+
+        //4、设置默认的一些header
+//        List<Header> headers = new ArrayList<>();
+//        BasicHeader userAgentHeader = new BasicHeader("User-Agent", "xxx");
+//        headers.add(userAgentHeader);
+//        httpClientBuilder.setDefaultHeaders(headers);
+    }
 
     //保存sessionId
     public static Map<String, String> cookies = new HashMap<>();
@@ -69,7 +142,9 @@ public class HttpClientUtil {
                 .build();
         get.setConfig(build);
 
-        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+//        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+        CloseableHttpClient closeableHttpClient = httpClientBuilder.build();
+
         CloseableHttpResponse response = null;
         String result = "";
         try {
@@ -104,7 +179,8 @@ public class HttpClientUtil {
      */
     public static String doFormPost(String url, Map<String, String> params, Map<String, String> headers) {
         logger.info("接口请求地址：" + url);
-        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+//        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+        CloseableHttpClient closeableHttpClient = httpClientBuilder.build();
         HttpPost post = new HttpPost(url);
 
         if (params != null) {
@@ -171,7 +247,8 @@ public class HttpClientUtil {
      */
     public static String doJsonPost(String url, String body, Map<String, String> headers) {
 
-        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+//        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+        CloseableHttpClient closeableHttpClient = httpClientBuilder.build();
         HttpPost post = new HttpPost(url);
 
         //设置请求体
@@ -233,7 +310,8 @@ public class HttpClientUtil {
      */
     public static String doPostWithNoCookie(String url, Map<String, String> params) throws UnsupportedEncodingException {
 
-        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+//        CloseableHttpClient closeableHttpClient = HttpClients.createDefault();
+        CloseableHttpClient closeableHttpClient = httpClientBuilder.build();
         HttpPost post = new HttpPost(url);
 
         if (params != null) {
@@ -328,6 +406,26 @@ public class HttpClientUtil {
         if (jsessionIdCookie != null) {
             request.addHeader("Cookie", jsessionIdCookie);
         }
+    }
+
+    //创建支持安全协议的链接工厂
+    private ConnectionSocketFactory trustHttpsCertificates() throws KeyStoreException, NoSuchAlgorithmException, KeyManagementException {
+
+        SSLContextBuilder sslContextBuilder = new SSLContextBuilder();
+        //加载信任的证书
+        sslContextBuilder.loadTrustMaterial(null, new TrustStrategy() {
+            //判断是否信任url
+            @Override
+            public boolean isTrusted(X509Certificate[] x509Certificates, String s) throws CertificateException {
+                return true;
+            }
+        });
+        SSLContext sslContext = sslContextBuilder.build();
+        SSLConnectionSocketFactory sslConnectionSocketFactory = new
+                SSLConnectionSocketFactory(sslContext, new String[]{
+                "SSLv2Hello", "SSLv3", "TLSv1", "TLSv1.1", "TLSv1.2"}
+                , null, NoopHostnameVerifier.INSTANCE);
+        return sslConnectionSocketFactory;
     }
 
 }

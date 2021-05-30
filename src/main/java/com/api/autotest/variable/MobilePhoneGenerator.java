@@ -28,12 +28,12 @@ public class MobilePhoneGenerator {
         return columnLableAndValues.get("systemNotExistedMobilePhone").toString();
     }
 
-    public static void main(String[] args) {
-        MobilePhoneGenerator phoneGenerator = new MobilePhoneGenerator();
-        String s1 = phoneGenerator.generateSystemNotExistedMobilePhone();
-        //columnValue：1.8813998451E10,因为将它当成一个很大的整数
-        System.out.println("s1:"+s1);
-        String s2 = phoneGenerator.generateToRegisteredMobilePhone();
-        System.out.println("s2:"+s2);
-    }
+//    public static void main(String[] args) {
+//        MobilePhoneGenerator phoneGenerator = new MobilePhoneGenerator();
+//        String s1 = phoneGenerator.generateSystemNotExistedMobilePhone();
+//        //columnValue：1.8813998451E10,因为将它当成一个很大的整数
+//        System.out.println("s1:"+s1);
+//        String s2 = phoneGenerator.generateToRegisteredMobilePhone();
+//        System.out.println("s2:"+s2);
+//    }
 }
