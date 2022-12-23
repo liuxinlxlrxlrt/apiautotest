@@ -9,13 +9,13 @@ import java.util.Map;
  * 数据库查询结果实体类
  */
 @Data
-public class DBQueryResult {
+public class DBQueryByMabtisResult {
     /**
-     * 脚本编号
+     * 脚本表名
      */
-    private String no;
+    private String tableName;
     /**
      * 脚本查到的数据，保存到map中，key的是字段名，value保存的是对应字段查到的数据
      */
-    private Map<String, Object> columnLabelAndValues;
+    private Map<String, String> columnLabelAndValues;
 }

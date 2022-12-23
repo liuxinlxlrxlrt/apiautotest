@@ -18,8 +18,9 @@ public class DataProviderTestV3 extends BaseProcessorV8 {
      * @return
      */
     @DataProvider
-    public Object[][] datas() {
-        Object[][] datas = CaseUtil.getCaseDatasByApiId("3", cellNames);
+    public Object[][] datas2() {
+        String[] cellNames = {"CaseId", "ApiId", "Params", "ExpectedResponseData", "PreVerifyDataSql", "AfterVerifyDataSql"};
+        Object[][] datas = CaseUtil.getCaseDatasByApiId("2", cellNames);
         return datas;
     }
 }

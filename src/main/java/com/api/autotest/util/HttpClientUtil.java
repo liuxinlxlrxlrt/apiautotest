@@ -282,7 +282,10 @@ public class HttpClientUtil {
         CloseableHttpResponse response = null;
 
         try {
+            addCookieInRequestHeaderBeforeRequest(post);
             response = closeableHttpClient.execute(post);
+            getAndStoreCookiesFromResponseHeader(response);
+
             StatusLine statusLine = response.getStatusLine();
 
             if (HttpStatus.SC_OK == statusLine.getStatusCode()) {

@@ -1,6 +1,7 @@
 package com.api.autotest.util;
 
 import com.api.autotest.pojo.Case;
+
 import java.lang.reflect.Method;
 import java.util.ArrayList;
 import java.util.List;
@@ -13,7 +14,7 @@ public class CaseUtil {
 
     static {
         //将所有数据解析封装到cases集合对象中
-        List<Case> caseList = ExcelUtils.load(ExcelUtils.casePath, "用例", Case.class);
+        List<Case> caseList = ExcelUtils.load(PropertiesUtil.getExcelPathFromProp(), PropertiesUtil.getCaseSheetNameProp(), Case.class);
         cases.addAll(caseList);
 
 

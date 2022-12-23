@@ -30,7 +30,7 @@ public class WriteBackData {
     private String result;
 
     @Override
-    public String toString(){
-        return "sheetName="+sheetName+",rowIdentifier="+rowIdentifier+",cellName="+cellName+",result="+result;
+    public String toString() {
+        return "sheetName=" + sheetName + ",rowIdentifier=" + rowIdentifier + ",cellName=" + cellName + ",result=" + result;
     }
 }

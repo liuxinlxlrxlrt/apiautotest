@@ -1,489 +1,533 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <testng-results skipped="0" failed="0" ignored="0" total="13" passed="13">
-  <reporter-output>
-  </reporter-output>
-  <suite name="接口自动化" duration-ms="4220" started-at="2021-05-30T09:56:00 CST" finished-at="2021-05-30T09:56:04 CST">
-    <groups>
-    </groups>
-    <test name="成语大全接口" duration-ms="3100" started-at="2021-05-30T09:56:00 CST" finished-at="2021-05-30T09:56:03 CST">
-      <class name="com.api.autotest.testcase.DataProviderTestV2">
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]" name="test" duration-ms="1750" started-at="2021-05-30T09:56:01 CST" data-provider="datas" finished-at="2021-05-30T09:56:02 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[7]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"key":"","wd":"${correctWord}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]" name="test" duration-ms="150" started-at="2021-05-30T09:56:02 CST" data-provider="datas" finished-at="2021-05-30T09:56:03 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[8]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"key":"${correctKey}","wb":""}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"reason":"成语不能为空","result":null,"error_code":2015701}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]" name="test" duration-ms="150" started-at="2021-05-30T09:56:03 CST" data-provider="datas" finished-at="2021-05-30T09:56:03 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[9]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"key":"${invalidKey}","wd":"${correctWord}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]" name="test" duration-ms="230" started-at="2021-05-30T09:56:03 CST" data-provider="datas" finished-at="2021-05-30T09:56:03 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[10]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"key":"${correctKey}","wd":"${invalidWord}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"reason":"暂查询不到结果!","result":null,"error_code":2015702}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}]]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]" name="test" duration-ms="130" started-at="2021-05-30T09:56:03 CST" data-provider="datas" finished-at="2021-05-30T09:56:03 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[11]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"key":"${invalidKey}","wd":"${invalidWord}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]" name="test" duration-ms="170" started-at="2021-05-30T09:56:03 CST" data-provider="datas" finished-at="2021-05-30T09:56:03 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[12]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[2]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"key":"${correctKey}","wd":"${correctWord}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"reason":"success!","result":{"name":"一心一意","pinyin":"yī xīn yī yì","jbsy":["心思、意念专一。"],"xxsy":["【解释】：只有一个心眼儿，没有别的考虑。","【出自】：《三国志·魏志·杜恕传》：“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》：“故推一心，任一意，直而行之耳。”","【示例】：所以彭官保便～的料理防守事宜，庄制军便～料理军需器械。 <br>◎清·张春帆《宦海》第四回","【语法】：联合式；作定语、状语；含褒义"],"chuchu":"《三国志·魏志·杜恕传》:“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》:“故推一心，任一意，直而行之耳。”","liju":"","jyc":["一心一计","一心一路","聚精会神","屏气凝神","推心致腹","全心全意","全神关注","真心实意","全神贯注","一心无二","心无旁骛","专心一志","专心致志"],"fyc":["一心二意","筑室道谋","心不在焉","二三其德","三心二意","见异思迁","三心两意","心猿意马","东张西望"]},"error_code":0}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-      </class> <!-- com.api.autotest.testcase.DataProviderTestV2 -->
-    </test> <!-- 成语大全接口 -->
-    <test name="手机号码归属地" duration-ms="1080" started-at="2021-05-30T09:56:03 CST" finished-at="2021-05-30T09:56:04 CST">
-      <class name="com.api.autotest.testcase.DataProviderTestV3">
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="test" duration-ms="130" started-at="2021-05-30T09:56:03 CST" data-provider="datas" finished-at="2021-05-30T09:56:03 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[13]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"phone":"${toBeRegisterPhoneOfLocaiton}","key":""}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="test" duration-ms="150" started-at="2021-05-30T09:56:03 CST" data-provider="datas" finished-at="2021-05-30T09:56:04 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[14]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"phone":"","key":"${correctKeyOfLocaiton}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"201","reason":"The phone number can not be empty!","result":null,"error_code":201101}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="test" duration-ms="160" started-at="2021-05-30T09:56:04 CST" data-provider="datas" finished-at="2021-05-30T09:56:04 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[15]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"phone":"${invalidPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"202","reason":"Wrong phone number!","result":null,"error_code":201102}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="test" duration-ms="140" started-at="2021-05-30T09:56:04 CST" data-provider="datas" finished-at="2021-05-30T09:56:04 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[16]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${invalidKeyOfLocaiton}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="test" duration-ms="170" started-at="2021-05-30T09:56:04 CST" data-provider="datas" finished-at="2021-05-30T09:56:04 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[17]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="test" duration-ms="170" started-at="2021-05-30T09:56:04 CST" data-provider="datas" finished-at="2021-05-30T09:56:04 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[18]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"phone":"${registeredPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"200","reason":"Return Successd!","result":{"province":"北京","city":"北京","areacode":"010","zip":"100000","company":"分享通信","card":""},"error_code":0}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="test" duration-ms="160" started-at="2021-05-30T09:56:04 CST" data-provider="datas" finished-at="2021-05-30T09:56:04 CST">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[19]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[3]]>
-              </value>
-            </param>
-            <param index="2">
-              <value>
-                <![CDATA[{"phone":"${notRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
-              </value>
-            </param>
-            <param index="3">
-              <value>
-                <![CDATA[{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}]]>
-              </value>
-            </param>
-            <param index="4">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-            <param index="5">
-              <value>
-                <![CDATA[]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="batchWriteBackDate()[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]" name="batchWriteBackDate" is-config="true" duration-ms="60" started-at="2021-05-30T09:56:04 CST" finished-at="2021-05-30T09:56:05 CST">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- batchWriteBackDate -->
-      </class> <!-- com.api.autotest.testcase.DataProviderTestV3 -->
-    </test> <!-- 手机号码归属地 -->
-  </suite> <!-- 接口自动化 -->
+    <reporter-output>
+    </reporter-output>
+    <suite name="接口自动化" duration-ms="4220" started-at="2021-05-30T09:56:00 CST" finished-at="2021-05-30T09:56:04 CST">
+        <groups>
+        </groups>
+        <test name="成语大全接口" duration-ms="3100" started-at="2021-05-30T09:56:00 CST"
+              finished-at="2021-05-30T09:56:03 CST">
+            <class name="com.api.autotest.testcase.DataProviderTestV2">
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]"
+                             name="test" duration-ms="1750" started-at="2021-05-30T09:56:01 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:02 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[7]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[2]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"key":"","wd":"${correctWord}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]"
+                             name="test" duration-ms="150" started-at="2021-05-30T09:56:02 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:03 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[8]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[2]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"key":"${correctKey}","wb":""}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"reason":"成语不能为空","result":null,"error_code":2015701}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]"
+                             name="test" duration-ms="150" started-at="2021-05-30T09:56:03 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:03 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[9]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[2]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"key":"${invalidKey}","wd":"${correctWord}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]"
+                             name="test" duration-ms="230" started-at="2021-05-30T09:56:03 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:03 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[10]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[2]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"key":"${correctKey}","wd":"${invalidWord}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"reason":"暂查询不到结果!","result":null,"error_code":2015702}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}]]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]"
+                             name="test" duration-ms="130" started-at="2021-05-30T09:56:03 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:03 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[11]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[2]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"key":"${invalidKey}","wd":"${invalidWord}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV2@6f195bc3]"
+                             name="test" duration-ms="170" started-at="2021-05-30T09:56:03 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:03 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[12]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[2]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"key":"${correctKey}","wd":"${correctWord}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"reason":"success!","result":{"name":"一心一意","pinyin":"yī xīn yī yì","jbsy":["心思、意念专一。"],"xxsy":["【解释】：只有一个心眼儿，没有别的考虑。","【出自】：《三国志·魏志·杜恕传》：“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》：“故推一心，任一意，直而行之耳。”","【示例】：所以彭官保便～的料理防守事宜，庄制军便～料理军需器械。 <br>◎清·张春帆《宦海》第四回","【语法】：联合式；作定语、状语；含褒义"],"chuchu":"《三国志·魏志·杜恕传》:“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》:“故推一心，任一意，直而行之耳。”","liju":"","jyc":["一心一计","一心一路","聚精会神","屏气凝神","推心致腹","全心全意","全神关注","真心实意","全神贯注","一心无二","心无旁骛","专心一志","专心致志"],"fyc":["一心二意","筑室道谋","心不在焉","二三其德","三心二意","见异思迁","三心两意","心猿意马","东张西望"]},"error_code":0}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+            </class> <!-- com.api.autotest.testcase.DataProviderTestV2 -->
+        </test> <!-- 成语大全接口 -->
+        <test name="手机号码归属地" duration-ms="1080" started-at="2021-05-30T09:56:03 CST"
+              finished-at="2021-05-30T09:56:04 CST">
+            <class name="com.api.autotest.testcase.DataProviderTestV3">
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="test" duration-ms="130" started-at="2021-05-30T09:56:03 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:03 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[13]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[3]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"phone":"${toBeRegisterPhoneOfLocaiton}","key":""}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="test" duration-ms="150" started-at="2021-05-30T09:56:03 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:04 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[14]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[3]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"phone":"","key":"${correctKeyOfLocaiton}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"201","reason":"The phone number can not be empty!","result":null,"error_code":201101}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="test" duration-ms="160" started-at="2021-05-30T09:56:04 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:04 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[15]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[3]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"phone":"${invalidPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"202","reason":"Wrong phone number!","result":null,"error_code":201102}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="test" duration-ms="140" started-at="2021-05-30T09:56:04 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:04 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[16]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[3]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${invalidKeyOfLocaiton}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="test" duration-ms="170" started-at="2021-05-30T09:56:04 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:04 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[17]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[3]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"phone":"${toBeRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[[{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredPhoneOfLocaiton}'"}]]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="test" duration-ms="170" started-at="2021-05-30T09:56:04 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:04 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[18]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[3]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"phone":"${registeredPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"200","reason":"Return Successd!","result":{"province":"北京","city":"北京","areacode":"010","zip":"100000","company":"分享通信","card":""},"error_code":0}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="test(java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String, java.lang.String)[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="test" duration-ms="160" started-at="2021-05-30T09:56:04 CST" data-provider="datas"
+                             finished-at="2021-05-30T09:56:04 CST">
+                    <params>
+                        <param index="0">
+                            <value>
+                                <![CDATA[19]]>
+                            </value>
+                        </param>
+                        <param index="1">
+                            <value>
+                                <![CDATA[3]]>
+                            </value>
+                        </param>
+                        <param index="2">
+                            <value>
+                                <![CDATA[{"phone":"${notRegisterPhoneOfLocaiton}","key":"${correctKeyOfLocaiton}"}]]>
+                            </value>
+                        </param>
+                        <param index="3">
+                            <value>
+                                <![CDATA[{"resultcode":"200","reason":"Return Successd!","result":{"province":"广东","city":"广州","areacode":"020","zip":"510000","company":"移动","card":""},"error_code":0}]]>
+                            </value>
+                        </param>
+                        <param index="4">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                        <param index="5">
+                            <value>
+                                <![CDATA[]]>
+                            </value>
+                        </param>
+                    </params>
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- test -->
+                <test-method status="PASS"
+                             signature="batchWriteBackDate()[pri:0, instance:com.api.autotest.testcase.DataProviderTestV3@42d8062c]"
+                             name="batchWriteBackDate" is-config="true" duration-ms="60"
+                             started-at="2021-05-30T09:56:04 CST" finished-at="2021-05-30T09:56:05 CST">
+                    <reporter-output>
+                    </reporter-output>
+                </test-method> <!-- batchWriteBackDate -->
+            </class> <!-- com.api.autotest.testcase.DataProviderTestV3 -->
+        </test> <!-- 手机号码归属地 -->
+    </suite> <!-- 接口自动化 -->
 </testng-results>

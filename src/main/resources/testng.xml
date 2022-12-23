@@ -3,14 +3,15 @@
 <suite name="接口自动化">
     <test name="成语大全接口">
         <classes>
-            <class name="com.api.autotest.testcase.DataProviderTestV2"></class>
+            <class name="com.api.autotest.testcase.DataProviderTestV2">
+            </class>
         </classes>
     </test>
-    <test name="手机号码归属地">
-        <classes>
-            <class name="com.api.autotest.testcase.DataProviderTestV3"></class>
-        </classes>
-    </test>
+    <!--<test name="手机号码归属地">-->
+        <!--<classes>-->
+            <!--<class name="com.api.autotest.testcase.DataProviderTestV3"></class>-->
+        <!--</classes>-->
+    <!--</test>-->
 
     <!--testng测试报告-->
     <listeners>

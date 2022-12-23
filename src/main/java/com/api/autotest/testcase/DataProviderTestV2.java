@@ -9,7 +9,7 @@ import org.testng.annotations.DataProvider;
  * 2、修改用例后，代码需要修改，维护成本高
  * 3、重复读取
  */
-public class DataProviderTestV2 extends BaseProcessorV8 {
+public class DataProviderTestV2 extends BaseProcessorV9 {
 
     /**
      * 获取接口2的所有测试数据
@@ -17,8 +17,10 @@ public class DataProviderTestV2 extends BaseProcessorV8 {
      * @return
      */
     @DataProvider
-    public Object[][] datas() {
-        Object[][] datas = CaseUtil.getCaseDatasByApiId("2", cellNames);
+    public Object[][] datas1() {
+
+        String[] cellNames = {"CaseId", "ApiId", "Params", "ExpectedResponseData", "PreVerifyDataSql", "AfterVerifyDataSql"};
+        Object[][] datas = CaseUtil.getCaseDatasByApiId("1", cellNames);
         return datas;
     }
 

@@ -16,7 +16,7 @@ public class Case {
     private String afterVerifyDataResult;
 
     @Override
-    public String toString(){
-        return "caseId="+caseId +",apiId="+apiId +",desc="+desc +",params="+params+"" + ",expectedResponseData"+expectedResponseData +",actualResponseData"+actualResponseData;
+    public String toString() {
+        return "caseId=" + caseId + ",apiId=" + apiId + ",desc=" + desc + ",params=" + params + "" + ",expectedResponseData" + expectedResponseData + ",actualResponseData" + actualResponseData;
     }
 }

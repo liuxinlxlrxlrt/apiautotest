@@ -20,7 +20,7 @@ public class VariableConvertUtil {
 
     static {
         //第一步加载表单中的数据一次将每行封装成对象，然后统一添加到集合中
-        List<Variable> variableList = ExcelUtils.load(ExcelUtils.casePath, "变量", Variable.class);
+        List<Variable> variableList = ExcelUtils.load(PropertiesUtil.getExcelPathFromProp(), PropertiesUtil.getVariableSheetNameProp(), Variable.class);
         variables.addAll(variableList);
 
         /**

@@ -91,7 +91,24 @@
             <version>3.0</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>org.mybatis.spring.boot</groupId>
+            <artifactId>mybatis-spring-boot-starter</artifactId>
+            <version>2.2.0</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-lang3</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-test</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-test</artifactId>
+            <version>5.3.10</version>
+        </dependency>
     </dependencies>
 
     <build>
@@ -126,12 +143,12 @@
                     <!--<testFailureIgnore>true</testFailureIgnore>-->
                     <!--&lt;!&ndash;指定构建过程中的编码格式&ndash;&gt;-->
                     <!--<argLine>-->
-                        <!-- -Dfile.encoding=UTF-8-->
+                    <!-- -Dfile.encoding=UTF-8-->
                     <!--</argLine>-->
                     <!--<suiteXmlFiles>-->
-                        <!--<suiteXmlFile>-->
-                            <!--./src/main/resources/testng.xml-->
-                        <!--</suiteXmlFile>-->
+                    <!--<suiteXmlFile>-->
+                    <!--./src/main/resources/testng.xml-->
+                    <!--</suiteXmlFile>-->
                     <!--</suiteXmlFiles>-->
 
                     <!--testng测试报告插件-->

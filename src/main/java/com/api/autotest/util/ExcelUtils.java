@@ -16,7 +16,7 @@ import java.util.Map;
  */
 public class ExcelUtils {
 
-    public static String casePath="src/main/resources/case_v9.xls";
+    public static String casePath = "src/main/resources/case_v902.xls";
 
     public static Map<String, Integer> rowIdentifierMappingRowNum = new HashMap<>();
     public static Map<String, Integer> cellNameMappingCellNum = new HashMap<>();
@@ -28,7 +28,7 @@ public class ExcelUtils {
          * 1、获取caseId以及对应的行索引
          * 2、获取cellName以及它对应的列索引
          */
-        loadRownumAndCellnumMapping(ExcelUtils.casePath, "用例");
+        loadRownumAndCellnumMapping(PropertiesUtil.getExcelPathFromProp(), PropertiesUtil.getCaseSheetNameProp());
     }
 
     /**
@@ -125,7 +125,7 @@ public class ExcelUtils {
      */
     public static <T> List<T> load(String excelPath, String sheetName, Class<T> clazz) {
 
-        List<T>  list = new ArrayList<>();
+        List<T> list = new ArrayList<>();
         //创建WorkBook对象
         try {
             Workbook workbook = WorkbookFactory.create(new File(excelPath));
@@ -152,6 +152,7 @@ public class ExcelUtils {
                 fields[i] = title;
             }
             System.out.println("");
+            //获取行号
             int lastRowIndex = sheet.getLastRowNum();
 
             //循环遍历标题以外的所有内容，将所有内容保存到用例对象中
@@ -213,7 +214,6 @@ public class ExcelUtils {
      *
      * @param filePath
      * @param sheetName
-     * @param caseId
      * @param cellName
      * @param result
      */

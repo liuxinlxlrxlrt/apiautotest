@@ -12,19 +12,20 @@ import java.util.Map;
 public class DBCheckUtil {
     /**
      * 根据脚本执行查询并返回查询结果
+     *
      * @param verifySql
      * @return
      */
-    public static String doQuery(String verifySql){
-        List<DBQueryResult> dbQueryResults =new ArrayList();
+    public static String doQuery(String verifySql) {
+        List<DBQueryResult> dbQueryResults = new ArrayList();
         //将脚本字符串封装成了list对象
         List<DBChecker> dbCheckers = JSONObject.parseArray(verifySql, DBChecker.class);
         //循环遍历，取出sql执行
         for (DBChecker dbChecker : dbCheckers) {
             String no = dbChecker.getNo();
-            System.out.println("no："+no);
+            System.out.println("no：" + no);
             String sql = dbChecker.getSql();
-            System.out.println("sql："+sql);
+            System.out.println("sql：" + sql);
             //执行查询，获取结果
             Map<String, Object> columnLabelAndValues = JDBCUtil.query(sql);
 //            Set<Map.Entry<String, Object>> entries = columnLabelAndValues.entrySet();
@@ -44,12 +45,12 @@ public class DBCheckUtil {
         return JSONObject.toJSONString(dbQueryResults);
     }
 
-//    public static void main(String[] args) {
-//        String sqllist="[{\"no\":\"1\",\"sql\":\"select leaveamount from member where mobilephone='18813998449' \"},{\"no\":\"2\",\"sql\":\"select count(*) as totalNum from financelog where IncomeMenberId=(select id from member where mobilephone='18813998449') \"}]";
-//
-//        List<DBChecker> dbCheckers = JSONObject.parseArray(sqllist, DBChecker.class);
-//        for (DBChecker dbChecker : dbCheckers) {
-//            System.out.println(dbChecker);
-//        }
-//    }
+    public static void main(String[] args) {
+        String sqllist="[{\"no\":\"1\",\"sql\":\"select leaveamount from member where mobilephone='18813998449' \"},{\"no\":\"2\",\"sql\":\"select count(*) as totalNum from financelog where IncomeMenberId=(select id from member where mobilephone='18813998449') \"}]";
+
+        List<DBChecker> dbCheckers = JSONObject.parseArray(sqllist, DBChecker.class);
+        for (DBChecker dbChecker : dbCheckers) {
+            System.out.println(dbChecker);
+        }
+    }
 }

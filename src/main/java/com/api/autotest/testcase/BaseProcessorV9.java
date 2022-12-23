@@ -4,6 +4,8 @@ import com.alibaba.fastjson.JSONObject;
 import com.api.autotest.pojo.WriteBackData;
 import com.api.autotest.util.*;
 import org.apache.log4j.Logger;
+import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.testng.AbstractTestNGSpringContextTests;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.Test;
 
@@ -14,15 +16,18 @@ import java.util.Map;
 /**
  * 接口测试统一处理类
  */
-public class BaseProcessorV8 {
+@SpringBootTest
+public class BaseProcessorV9 extends AbstractTestNGSpringContextTests {
 
-    private static Logger logger = Logger.getLogger(BaseProcessorV8.class);
+    private static Logger logger = Logger.getLogger(BaseProcessorV9.class);
 
 
-    @Test(dataProvider = "datas2")
+    @Test(dataProvider = "datas1")
     public void test(String caseId, String apiId, String params, String expectedResponseData,
                      String preVerifyDataSql, String afterVerifyDataSql) throws UnsupportedEncodingException {
         logger.info("调用接口前的数据验证");
+        //数据准备
+
         //执行“接口调用前”数据验证
         if (preVerifyDataSql != null && preVerifyDataSql.trim().length() > 0) {
 
@@ -30,10 +35,10 @@ public class BaseProcessorV8 {
             preVerifyDataSql = VariableConvertUtil.replaceVariable(preVerifyDataSql);
 
             //在接口调用前查询我们想要验证的字段
-            String preVerifyDataResult = DBCheckUtil.doQuery(preVerifyDataSql);
+            String preVerifyDataResult = DBCheckByMybatisUtil.doQuery(preVerifyDataSql);
 
             //保存回写结果
-            ExcelUtils.writeBackDatas.add(new WriteBackData("用例", caseId, "PreVerifyDataResult", preVerifyDataResult));
+            ExcelUtils.writeBackDatas.add(new WriteBackData(PropertiesUtil.getCaseSheetNameProp(), caseId, "PreVerifyDataResult", preVerifyDataResult));
 
         }
         logger.info("根据接口编号【" + apiId + "】获取接口请求地址");
@@ -67,7 +72,7 @@ public class BaseProcessorV8 {
          * result+sheetName+caseId+cellName
          */
         //保存回写结果
-        ExcelUtils.writeBackDatas.add(new WriteBackData("用例", caseId, "ActualResponseData", actualResponseData));
+        ExcelUtils.writeBackDatas.add(new WriteBackData(PropertiesUtil.getCaseSheetNameProp(), caseId, "ActualResponseData", actualResponseData));
         logger.info("接口调用后的数据验证");
         //执行接口调用后数据验证
         if (afterVerifyDataSql != null && afterVerifyDataSql.trim().length() > 0) {
@@ -76,10 +81,10 @@ public class BaseProcessorV8 {
             afterVerifyDataSql = VariableConvertUtil.replaceVariable(afterVerifyDataSql);
 
             //在接口调用后查询我们想要验证的字段
-            String afterVerifyDataResult = DBCheckUtil.doQuery(afterVerifyDataSql);
+            String afterVerifyDataResult = DBCheckByMybatisUtil.doQuery(afterVerifyDataSql);
 
             //保存回写结果
-            ExcelUtils.writeBackDatas.add(new WriteBackData("用例", caseId, "AfterVerifyDataResult", afterVerifyDataResult));
+            ExcelUtils.writeBackDatas.add(new WriteBackData(PropertiesUtil.getCaseSheetNameProp(), caseId, "AfterVerifyDataResult", afterVerifyDataResult));
         }
     }
 
@@ -89,7 +94,7 @@ public class BaseProcessorV8 {
      */
     @AfterSuite
     public void batchWriteBackDate() {
-        ExcelUtils.batchWriteBackDate(ExcelUtils.casePath);
+        ExcelUtils.batchWriteBackDate(PropertiesUtil.getExcelPathFromProp());
     }
 
 

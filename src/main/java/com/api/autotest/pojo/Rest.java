@@ -10,7 +10,7 @@ public class Rest {
     private String url;
 
     @Override
-    public String toString(){
-        return "apiId="+apiId+",apiName="+apiName+",type="+type+",url="+url;
+    public String toString() {
+        return "apiId=" + apiId + ",apiName=" + apiName + ",type=" + type + ",url=" + url;
     }
 }

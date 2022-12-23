@@ -3,12 +3,12 @@ package com.api.autotest.pojo;
 import lombok.Data;
 
 @Data
-public class DBChecker {
-    private String no;
+public class DBCheckerByMabatis {
+    private String tableName;
     private String sql;
 
     @Override
     public String toString() {
-        return "no=" + no + ",sql=" + sql;
+        return "tableName=" + tableName + ",sql=" + sql;
     }
 }

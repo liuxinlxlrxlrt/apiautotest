@@ -1,109 +1,160 @@
 <html>
 <head>
-<title>TestNG:  成语大全接口</title>
-<link href="../testng.css" rel="stylesheet" type="text/css" />
-<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+    <title>TestNG: 成语大全接口</title>
+    <link href="../testng.css" rel="stylesheet" type="text/css"/>
+    <link href="../my-testng.css" rel="stylesheet" type="text/css"/>
 
-<style type="text/css">
-.log { display: none;} 
-.stack-trace { display: none;} 
-</style>
-<script type="text/javascript">
-<!--
-function flip(e) {
-  current = e.style.display;
-  if (current == 'block') {
-    e.style.display = 'none';
-    return 0;
-  }
-  else {
-    e.style.display = 'block';
-    return 1;
-  }
-}
+    <style type="text/css">
+        .log {
+            display: none;
+        }
 
-function toggleBox(szDivId, elem, msg1, msg2)
-{
-  var res = -1;  if (document.getElementById) {
-    res = flip(document.getElementById(szDivId));
-  }
-  else if (document.all) {
-    // this is the way old msie versions work
-    res = flip(document.all[szDivId]);
-  }
-  if(elem) {
-    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
-  }
+        .stack-trace {
+            display: none;
+        }
+    </style>
+    <script type="text/javascript">
+        <!--
+        function flip(e) {
+            current = e.style.display;
+            if (current == 'block') {
+                e.style.display = 'none';
+                return 0;
+            } else {
+                e.style.display = 'block';
+                return 1;
+            }
+        }
 
-}
+        function toggleBox(szDivId, elem, msg1, msg2) {
+            var res = -1;
+            if (document.getElementById) {
+                res = flip(document.getElementById(szDivId));
+            } else if (document.all) {
+                // this is the way old msie versions work
+                res = flip(document.all[szDivId]);
+            }
+            if (elem) {
+                if (res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+            }
 
-function toggleAllBoxes() {
-  if (document.getElementsByTagName) {
-    d = document.getElementsByTagName('div');
-    for (i = 0; i < d.length; i++) {
-      if (d[i].className == 'log') {
-        flip(d[i]);
-      }
-    }
-  }
-}
+        }
 
-// -->
-</script>
+        function toggleAllBoxes() {
+            if (document.getElementsByTagName) {
+                d = document.getElementsByTagName('div');
+                for (i = 0; i < d.length; i++) {
+                    if (d[i].className == 'log') {
+                        flip(d[i]);
+                    }
+                }
+            }
+        }
+
+        // -->
+    </script>
 
 </head>
 <body>
-<h2 align='center'>成语大全接口</h2><table border='1' align="center">
-<tr>
-<td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
-</tr><tr>
-<td>Started on:</td><td>Sun Apr 18 17:38:37 CST 2021</td>
-</tr>
-<tr><td>Total time:</td><td>2 seconds (2827 ms)</td>
-</tr><tr>
-<td>Included groups:</td><td></td>
-</tr><tr>
-<td>Excluded groups:</td><td></td>
-</tr>
-</table><p/>
-<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<h2 align='center'>成语大全接口</h2>
+<table border='1' align="center">
+    <tr>
+        <td>Tests passed/Failed/Skipped:</td>
+        <td>6/0/0</td>
+    </tr>
+    <tr>
+        <td>Started on:</td>
+        <td>Sun Apr 18 17:38:37 CST 2021</td>
+    </tr>
+    <tr>
+        <td>Total time:</td>
+        <td>2 seconds (2827 ms)</td>
+    </tr>
+    <tr>
+        <td>Included groups:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Excluded groups:</td>
+        <td></td>
+    </tr>
+</table>
+<p/>
+<small><i>(Hover the method name to see the test class name)</i></small>
+<p/>
 <table width='100%' border='1' class='invocation-passed'>
-<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
-<tr><td><b>Test method</b></td>
-<td width="30%"><b>Exception</b></td>
-<td width="10%"><b>Time (seconds)</b></td>
-<td><b>Instance</b></td>
-</tr>
-<tr>
-<td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class: com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 7, 2, {"key":"","wd":"${correctWord}"}, {"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}, , </td>
-<td></td>
-<td>1</td>
-<td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td></tr>
-<tr>
-<td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class: com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 8, 2, {"key":"${correctKey}","wb":""}, {"reason":"成语不能为空","result":null,"error_code":2015701}, , </td>
-<td></td>
-<td>0</td>
-<td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td></tr>
-<tr>
-<td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class: com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 9, 2, {"key":"${invalidKey}","wd":"${correctWord}"}, {"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}, , </td>
-<td></td>
-<td>0</td>
-<td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td></tr>
-<tr>
-<td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class: com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 10, 2, {"key":"${correctKey}","wd":"${invalidWord}"}, {"reason":"暂查询不到结果!","result":null,"error_code":2015702}, [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}], [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}]</td>
-<td></td>
-<td>0</td>
-<td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td></tr>
-<tr>
-<td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class: com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 11, 2, {"key":"${invalidKey}","wd":"${invalidWord}"}, {"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}, , </td>
-<td></td>
-<td>0</td>
-<td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td></tr>
-<tr>
-<td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class: com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 12, 2, {"key":"${correctKey}","wd":"${correctWord}"}, {"reason":"success!","result":{"name":"一心一意","pinyin":"yī xīn yī yì","jbsy":["心思、意念专一。"],"xxsy":["【解释】：只有一个心眼儿，没有别的考虑。","【出自】：《三国志·魏志·杜恕传》：“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》：“故推一心，任一意，直而行之耳。”","【示例】：所以彭官保便～的料理防守事宜，庄制军便～料理军需器械。 <br>◎清·张春帆《宦海》第四回","【语法】：联合式；作定语、状语；含褒义"],"chuchu":"《三国志·魏志·杜恕传》:“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》:“故推一心，任一意，直而行之耳。”","liju":"","jyc":["一心一计","一心一路","聚精会神","屏气凝神","推心致腹","全心全意","全神关注","真心实意","全神贯注","一心无二","心无旁骛","专心一志","专心致志"],"fyc":["一心二意","筑室道谋","心不在焉","二三其德","三心二意","见异思迁","三心两意","心猿意马","东张西望"]},"error_code":0}, , </td>
-<td></td>
-<td>0</td>
-<td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td></tr>
-</table><p>
+    <tr>
+        <td colspan='4' align='center'><b>PASSED TESTS</b></td>
+    </tr>
+    <tr>
+        <td><b>Test method</b></td>
+        <td width="30%"><b>Exception</b></td>
+        <td width="10%"><b>Time (seconds)</b></td>
+        <td><b>Instance</b></td>
+    </tr>
+    <tr>
+        <td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class:
+            com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 7, 2, {"key":"","wd":"${correctWord}"},
+            {"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}, ,
+        </td>
+        <td></td>
+        <td>1</td>
+        <td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td>
+    </tr>
+    <tr>
+        <td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class:
+            com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 8, 2, {"key":"${correctKey}","wb":""},
+            {"reason":"成语不能为空","result":null,"error_code":2015701}, ,
+        </td>
+        <td></td>
+        <td>0</td>
+        <td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td>
+    </tr>
+    <tr>
+        <td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class:
+            com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 9, 2,
+            {"key":"${invalidKey}","wd":"${correctWord}"},
+            {"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}, ,
+        </td>
+        <td></td>
+        <td>0</td>
+        <td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td>
+    </tr>
+    <tr>
+        <td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class:
+            com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 10, 2,
+            {"key":"${correctKey}","wd":"${invalidWord}"}, {"reason":"暂查询不到结果!","result":null,"error_code":2015702},
+            [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}],
+            [{"no":"1","sql":"select count(*) as totalNum from member where mobilephone='${registeredMobilephone}'"}]
+        </td>
+        <td></td>
+        <td>0</td>
+        <td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td>
+    </tr>
+    <tr>
+        <td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class:
+            com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 11, 2,
+            {"key":"${invalidKey}","wd":"${invalidWord}"},
+            {"resultcode":"101","reason":"错误的请求KEY","result":null,"error_code":10001}, ,
+        </td>
+        <td></td>
+        <td>0</td>
+        <td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td>
+    </tr>
+    <tr>
+        <td title='com.api.autotest.testcase.DataProviderTestV2.test()'><b>test</b><br>Test class:
+            com.api.autotest.testcase.DataProviderTestV2<br>Parameters: 12, 2,
+            {"key":"${correctKey}","wd":"${correctWord}"}, {"reason":"success!","result":{"name":"一心一意","pinyin":"yī xīn
+            yī
+            yì","jbsy":["心思、意念专一。"],"xxsy":["【解释】：只有一个心眼儿，没有别的考虑。","【出自】：《三国志·魏志·杜恕传》：“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》：“故推一心，任一意，直而行之耳。”","【示例】：所以彭官保便～的料理防守事宜，庄制军便～料理军需器械。
+            <br>◎清·张春帆《宦海》第四回","【语法】：联合式；作定语、状语；含褒义"],"chuchu":"《三国志·魏志·杜恕传》:“免为庶人，徙章武郡，是岁嘉平元年。”裴松之注引《杜氏新书》:“故推一心，任一意，直而行之耳。”","liju":"","jyc":["一心一计","一心一路","聚精会神","屏气凝神","推心致腹","全心全意","全神关注","真心实意","全神贯注","一心无二","心无旁骛","专心一志","专心致志"],"fyc":["一心二意","筑室道谋","心不在焉","二三其德","三心二意","见异思迁","三心两意","心猿意马","东张西望"]},"error_code":0},
+            ,
+        </td>
+        <td></td>
+        <td>0</td>
+        <td>com.api.autotest.testcase.DataProviderTestV2@2173f6d9</td>
+    </tr>
+</table>
+<p>
 </body>
 </html>
